@@ -1,15 +1,12 @@
 // LESS
 /*MAIN STYLES*/
-@base-blue: #0076bf;
-@foot-blue: #456073;
-@light-blue: #cfdae5;
+@blue: #19496d;
+@dark-blue: #2a343d;
+@light-blue: #5f839d;
 @white: #fff;
-@dark-grey: #333;
-@medium-grey: #666;
-@border-grey: #bebdbd;
-@back-grey: #eae8e8;
-@pink: #c96565;
-@family: 'Open Sans', sans-serif;
+@pink: #d93189;
+@family: font-family: 'Nunito', sans-serif;
+@family-title: font-family: 'Lato', sans-serif;
 .rounded-corners (@radius:10px) {
 	-webkit-border-radius: @radius;
 	-moz-border-radius: @radius;
@@ -20,6 +17,8 @@
 
 /*GENERAL*/
 body {font-family:@family;}
+h1 {}
+h2 {}
 h3 {margin:0 0 50px; font-size:25px; font-weight:600; color:@base-blue; text-transform:uppercase; line-height:140%;}
 h4 {color:@base-blue;}
 a {color:@base-blue; cursor:pointer;}
@@ -27,7 +26,7 @@ a:hover {text-decoration:none; background:none;}
 .cont-site {padding:0;}
 
 /*HEADER*/
-header {position:relative;}
+header {position:fixed;}
 header {
 	
 }
