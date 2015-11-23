@@ -18,6 +18,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+	$(document).on('click', '.yamm .dropdown-menu', function(e) {
+	  	e.stopPropagation()
+	})
+</script>
 <!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
 <![endif]-->
@@ -26,10 +31,19 @@
 <body>
 	<div id="wrapper">
 		<header id="header" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
-			<nav id="main-nav">
-				<ul>
+			<nav id="main-nav" class="navbar yamm navbar-default" role="navigation">
+				<ul class="nav navbar-nav">
 					<li class="home"><h1><a href="#">Inicio</a></h1></li>
-					<li><a href="#">Roster</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Roster</a>
+						<ul class="dropdown-menu">
+					        <li>
+					          	<div class="yamm-content">
+					          		hola
+					          	</div>
+					        </li>
+					    </ul>
+					</li>
 					<li><a href="#">News</a></li>
 					<li><a href="#">On Tour</a></li>
 					<li><a href="#">Merch</a></li>
@@ -48,6 +62,7 @@
 			<div class="content clearfix cont-news container">
 				<div class="clearfix cont-about">
 					<div class="row">
+						<h3></h3>
 						<div class="top-about">
 							<p>Charco Chile nace tras la fusión entre las agencias Lotus Booking (Chile) y Charco (España), con el fin de desarrollar labores de Booking y Management de artistas iberoamericanos, instalando una nueva sede en Santiago de Chile.</p>
 							<p>Charco tiene como misión establecer acuerdos de colaboración y alianzas dentro de la industria musical entre artistas, managers, agentes, discográficas, festivales, promotores, con el fin de representar y desarrollar artistas fuera de su país de origen.</p>

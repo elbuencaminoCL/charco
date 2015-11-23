@@ -56,22 +56,30 @@ a:hover {
 #header {
   width: 100%;
   position: fixed;
-  background: url(../imag/back/bg-header.png) repeat left top;
   z-index: 1000;
   font-size: 300;
+  padding: 0;
   font-family: 'Nunito', sans-serif;
 }
 #header #main-nav {
   width: 100%;
   text-align: center;
+  margin: 0;
   padding: 0;
-  background: url(../imag/back/bg-nav.png) repeat left top;
+  background: url(../imag/back/bg-header.png) repeat left top;
   z-index: 900;
+  border: none !important;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
 }
 #header #main-nav ul {
   margin: 0 auto;
   padding: 0;
   text-align: center;
+  float: none;
 }
 #header #main-nav ul li {
   display: inline-block;
@@ -83,9 +91,20 @@ a:hover {
 #header #main-nav ul li.home {
   display: none;
 }
+#header #main-nav ul li.home h1 {
+  width: auto;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+#header #main-nav ul li.home h1 a {
+  display: inline-block;
+  background: url(../imag/logo/charco-sm.png) no-repeat center top;
+  text-indent: -999em;
+}
 #header #main-nav ul li a {
   display: inline-block;
-  padding: 25px 40px;
+  padding: 22px 35px;
   color: #ffffff;
   font-size: 16px;
   text-transform: uppercase;
@@ -111,11 +130,22 @@ a:hover {
   top: 0px;
   width: 100%;
   z-index: 1000;
-  height: 47px;
+}
+#header #main-nav.affix li a {
+  padding: 25px 30px;
 }
 #header #main-nav.affix li.home {
-  display: block;
-  visibilyty: visible;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  visibility: visible;
+  float: left;
+}
+#header #main-nav.affix li.home a {
+  margin: 10px 0;
+  padding: 0px 40px !important;
+  height: 51px;
+  float: left;
 }
 /*CONTENT*/
 h2 {
@@ -135,6 +165,8 @@ h2 {
   -moz-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.5);
   box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.5);
   z-index: 50;
+  background: #000;
+  text-align: center;
 }
 .header-int h1 {
   position: absolute;
@@ -147,6 +179,9 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: 300;
+}
+.header-int img {
+  margin: 0 auto;
 }
 /*Slider*/
 #slider {
@@ -211,6 +246,9 @@ h2 {
 }
 #content-block .ver-mas {
   text-align: right;
+}
+#content-block .ver-mas a {
+  font-weight: 400;
 }
 /*On Tour*/
 #ontour h2 {

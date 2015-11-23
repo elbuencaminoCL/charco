@@ -31,20 +31,24 @@ a:hover {text-decoration:none; background:none;}
 .cont-site {padding:0;}
 
 /*HEADER*/
-#header {width:100%; position:fixed; background:url(../imag/back/bg-header.png) repeat left top; z-index:1000; font-size:300; font-family:@family;}
+#header {width:100%; position:fixed; z-index:1000; font-size:300; padding:0; font-family:@family;}
 #header {
-	#main-nav {width:100%; text-align:center; padding:0; background:url(../imag/back/bg-nav.png) repeat left top; z-index:900;}
+	#main-nav {width:100%; text-align:center; margin:0; padding:0;  background:url(../imag/back/bg-header.png) repeat left top; z-index:900; border:none !important; .rounded-corners (@radius:0px);}
 	#main-nav {
-		ul {margin:0 auto; padding:0; text-align:center;}
+		ul {margin:0 auto; padding:0; text-align:center; float:none;}
 		ul li {display:inline-block; list-style-type:none; color:@white; text-transform:uppercase; float:none;}
 		ul li.home {display:none;}
-		ul li a {display:inline-block; padding:25px 40px; color:@white; font-size:16px; text-transform:uppercase; cursor:pointer;}
+		ul li.home h1 {width:auto; display:inline-block; margin:0; padding:0;}
+		ul li.home h1 a {display:inline-block; background:url(../imag/logo/charco-sm.png) no-repeat center top; text-indent:-999em;}
+		ul li a {display:inline-block; padding:22px 35px; color:@white; font-size:16px; text-transform:uppercase; cursor:pointer;}
 		a:hover {color:@pink; background:none;}
 		#form-contact {padding:0 25px; color:@white; font-size:16px; text-transform:uppercase; cursor:pointer;}
 		.nav > li > a:hover, .nav > li > a:focus {background:none;}
 	}
-	#main-nav.affix {position:fixed; top:0px; width:100%; z-index:1000; height:47px;}
-	#main-nav.affix li.home {display:block; visibilyty:visible;}
+	#main-nav.affix {position:fixed; top:0px; width:100%; z-index:1000;}
+	#main-nav.affix li a {padding:25px 30px;}
+	#main-nav.affix li.home {display:inline-block; margin:0; padding:0; visibility:visible; float:left;}
+	#main-nav.affix li.home a {margin:10px 0; padding:0px 40px !important; height:51px; float:left;}
 }
 
 /*CONTENT*/
@@ -55,8 +59,9 @@ h2 {margin:0;}
 }
 
 /*INT*/
-.header-int {margin:0 0 80px; -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.5); -moz-box-shadow:0px 3px 5px 0px rgba(50, 50, 50, 0.5); box-shadow:0px 3px 5px 0px rgba(50, 50, 50, 0.5); z-index:50;}
-.header-int h1 {position:absolute; width:100%; font-size:40px; top:90px; font-family:@family; text-align:center; color:@white; text-transform:uppercase; letter-spacing:5px; font-weight:300;}
+.header-int {margin:0 0 80px; -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.5); -moz-box-shadow:0px 3px 5px 0px rgba(50, 50, 50, 0.5); box-shadow:0px 3px 5px 0px rgba(50, 50, 50, 0.5); z-index:50; background:#000; text-align:center;}
+.header-int h1 {position:absolute; width:100%; font-size:40px; top:95px; font-family:@family; text-align:center; color:@white; text-transform:uppercase; letter-spacing:5px; font-weight:300;}
+.header-int img {margin:0 auto;}
 
 /*Slider*/
 #slider {margin:0 0 60px;}
@@ -78,6 +83,7 @@ h2 {margin:0;}
 		.date {margin:0 0 10px; font-size:14px; font-style:italic;}
 	}
 	.ver-mas {text-align:right;}
+	.ver-mas a {font-weight:400;}
 }
 
 /*On Tour*/
